@@ -3,4 +3,6 @@ Lab4Tests/bin
 Lab4Tests/obj
 IIG.DatabaseConnectionUtils
 IIG.FileWorker
+IIG.PasswordHashingUtils
+IIG.BinaryFlag-main
 .vs
