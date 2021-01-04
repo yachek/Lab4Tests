@@ -88,7 +88,7 @@ namespace Lab4Tests
             MultipleBinaryFlag second = new MultipleBinaryFlag(4, true);
             first.ResetFlag(2);
             first.ResetFlag(3);
-            string[] lines = BaseFileWorker.ReadLines(path + "manualWritedFile.txt");
+            string[] lines = BaseFileWorker.ReadAll(path + "manualWritedFile.txt").Split("\r\n");
             Assert.AreEqual(lines[0], first.ToString() + " " + first.GetFlag());
             Assert.AreEqual(lines[1], second.ToString() + " " + second.GetFlag());
         }
@@ -99,7 +99,7 @@ namespace Lab4Tests
             MultipleBinaryFlag second = new MultipleBinaryFlag(4, true);
             first.ResetFlag(2);
             first.ResetFlag(3);
-            string[] lines = BaseFileWorker.ReadLines(path + "writedFileWithFlag.txt");
+            string[] lines = BaseFileWorker.ReadAll(path + "writedFileWithFlag.txt").Split("\r\n");
             Assert.AreNotEqual(lines[0], first.ToString() + " " + first.GetFlag());
             Assert.AreNotEqual(lines[1], second.ToString() + " " + second.GetFlag());
         }

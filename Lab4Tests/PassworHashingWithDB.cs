@@ -61,12 +61,12 @@ namespace Lab4Tests
         [TestMethod]
         public void InsertingManualCredentialsToDBTest1()
         {
-            Assert.IsFalse(connectionWithDB.AddCredentials("gerf", "  678pol[]]\\/*``wrfsfdgvsfsfsdf異體字異體字異體字異體字異體字異體字異體字異體字]`;;:"));
+            Assert.IsFalse(connectionWithDB.AddCredentials("gerf1", "  678pol[]]\\/*``wrfsfdgvsfsfsdf異體字異體字異體字異體字異體字異體字異體字異體字]`;;:"));
         }
         [TestMethod]
         public void InsertingManualCredentialsToDBTest2()
         {
-            Assert.IsTrue(connectionWithDB.AddCredentials("gerf4", "  678pol[]]\\/*``ervfdsvsd;;;[]`][`][;[`:{};`][;`[]]{};`:cwrrrrrr"));
+            Assert.IsTrue(connectionWithDB.AddCredentials("gerf", "  678pol[]]\\/*``ervfdsvsd;;;[]`][`][;[`:{};`][;`[]]{};`:cwrrrrrr"));
         }
         [TestMethod]
         public void CheckRightCredentialsTest()
@@ -83,7 +83,7 @@ namespace Lab4Tests
         [TestMethod]
         public void UpdateRightCredentialsTest()
         {
-            Assert.IsTrue(connectionWithDB.UpdateCredentials("gerf4", "  678pol[]]\\/*``ervfdsvsd;;;[]`][`][;[`:{};`][;`[]]{};`:cwrrrrrr", "gerf4",
+            Assert.IsTrue(connectionWithDB.UpdateCredentials("gerf", "  678pol[]]\\/*``ervfdsvsd;;;[]`][`][;[`:{};`][;`[]]{};`:cwrrrrrr", "gerf",
                 PasswordHasher.GetHash(passwordForManualUser, saltForManualUser)));
         }
         [TestMethod]
